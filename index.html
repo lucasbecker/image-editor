@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Editor</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Image Editor</h1>
+    <p>com HTML5 Canvas e JavaScript</p>
+  </header>
+  
+  <main>
+    <button id="select-image">
+      <input type="file" accept="image/png, image/jpeg" id="photo-file">
+      Selecionar Imagem
+    </button>
+    <img id="photo-preview" draggable="false">
+    <div id="selection-tool"></div>
+    <button id="crop-image">Cortar Imagem</button>
+    <button id="download">Salvar Imagem</button>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por <a href="https://lucasbecker.github.io/" target="_blank">Lucas Becker</a>.</p>
+  </footer>
+
+  <script src="script.js" type="module"></script>
+  
+</body>
+</html>

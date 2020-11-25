@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@keyframes up {
+  from {
+      opacity: 0;
+      transform: translateY(1rem);
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+:root {
+  --bg: #fcfcfc;
+  --bg-dark: #333333;
+  --bg-true-dark: #130f0d;
+  
+  --bg-panel: #ebebeb;
+  --bg-panel-dark: #434343;
+  
+  --color-headings: #0077ff;
+  --color-headings-dark: #3867ff;
+  --color-headings-dark-opaque: #3867ff23;
+  
+  --color-text: #333333;
+  --color-text-dark: #B5B5B5;
+  --color-text-true-dark: #f0f0f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*, button, input {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: var(--bg-true-dark);
+  color: var(--color-text-true-dark);
+  font-size: 1.6rem;
+}
+
+header {
+  margin-top: 3.2rem;
+  padding-bottom: 4rem;
+
+  text-align: center;
+  color: var(--color-headings-dark);
+
+  animation: up 0.4s;
+}
+
+header p {
+  font-family: monospace;
+}
+
+main {
+  flex: 1;
+  width: min(80vw, 500px);
+
+  animation: up 0.4s 0.2s backwards;
+}
+
+footer {
+  margin: 3.2rem 0;
+  padding: 0 1.6rem;
+  text-align: center;
+}
+
+footer p {
+  animation: up 0.4s 0.4s backwards;
+  font-family: monospace;
+  opacity: 0.6;
+}
+footer p a {
+  color: var(--color-headings-dark);
+  text-decoration: none;
+  font-family: monospace;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: .8rem 1.6rem;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: var(--color-headings-dark);
+  color: var(--bg-true-dark);
+  cursor: pointer;
+}
+button:hover {
+  transform: translate(1px, 1px);
+}
+button + button {
+  margin-top: .8rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#photo-file {
+  display: none;
+}
+
+#photo-preview {
+  margin: 1.6rem 0;
+}
+
+#selection-tool {
+  position: fixed;
+  display: none;
+  border: 2px dashed var(--color-headings)
+}
+
+#crop-image, #download {
+  display: none;
+}
